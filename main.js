@@ -5,7 +5,7 @@ const root = document.querySelector(":root"),
   theme = document.getElementById("theme"),
   searchBar = document.getElementById("search-bar"),
   countryName = document.getElementsByClassName("country-name"),
-  moon = document.getElementById("moon"),
+  darkmode = document.getElementById("darkmode"),
   menu = document.getElementById("menu"),
   searchIcon = document.getElementById("search-icon"),
   search = document.getElementById("search"),
@@ -17,7 +17,7 @@ const root = document.querySelector(":root"),
   arrow = document.getElementById("arrow");
 
 const countryPage = document.getElementById("country-page"),
-  bigFlag = document.getElementById("big-flag"),
+  flag = document.getElementById("flag"),
   cn = document.getElementById("cn"),
   col1Span = document.getElementsByClassName("col-1-span"),
   col2Span = document.getElementsByClassName("col-2-span"),
@@ -64,7 +64,7 @@ fetch("https://restcountries.com/v2/all")
           );
         });
 
-        bigFlag.src = country.flag;
+        flag.src = country.flag;
         cn.innerText = country.name;
         col1Span[0].innerHTML = `<strong>Native Name: </strong>${country.nativeName}`;
         col1Span[1].innerHTML = `<strong>Population: </strong>${country.population}`;
@@ -137,14 +137,14 @@ function changeTheme() {
     root.style.setProperty("--bg", "#202c37");
     root.style.setProperty("--text", "#ffffff");
     root.style.setProperty("--lbg", "#2b3945");
-    moon.src = "icons/moon-regular.svg";
+    darkmode.src = "icons/moon-regular.svg";
     searchIcon.src = "icons/search-regular.svg";
     arrow.src = "icons/arrow-left-regular.svg";
   } else {
     root.style.setProperty("--bg", "#fafafa");
     root.style.setProperty("--text", "#111517");
     root.style.setProperty("--lbg", "#ffffff");
-    moon.src = "icons/moon-solid.svg";
+    darkmode.src = "icons/moon-solid.svg";
     searchIcon.src = "icons/search-solid.svg";
     arrow.src = "icons/arrow-left-solid.svg";
   }

@@ -98,7 +98,7 @@
       grid-template-columns: 1fr;
     }
   
-    .big-flag {
+    .flag {
       width: min(30rem, 100%);
       height: auto;
     }

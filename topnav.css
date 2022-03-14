@@ -39,7 +39,7 @@ header {
     pointer-events: none;
   }
   
-  .moon {
+  .darkmode {
     width: var(--icon-w);
   }
   
